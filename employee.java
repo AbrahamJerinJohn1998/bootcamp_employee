@@ -2,11 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class employee {
-    Integer choice,salary;
+    Integer salary;
     String ecode,ename,desg,cname,phno,email;
 
-    public employee(Integer choice, Integer salary, String ecode, String ename, String desg, String cname, String phno, String email) {
-        this.choice = choice;
+    public employee(Integer salary, String ecode, String ename, String desg, String cname, String phno, String email) {
         this.salary = salary;
         this.ecode = ecode;
         this.ename = ename;
@@ -37,7 +36,7 @@ public class employee {
                     phno=sc.next();
                     email=sc.next();
                 }
-                employee obj= new employee();
+                employee obj= new employee(Integer salary, String ecode, String ename, String desg, String cname, String phno, String email);
                 arr.add(obj);
                 break;
 
