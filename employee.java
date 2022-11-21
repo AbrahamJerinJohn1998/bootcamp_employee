@@ -2,11 +2,25 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class employee {
+    Integer choice,salary;
+    String ecode,ename,desg,cname,phno,email;
+
+    public employee(Integer choice, Integer salary, String ecode, String ename, String desg, String cname, String phno, String email) {
+        this.choice = choice;
+        this.salary = salary;
+        this.ecode = ecode;
+        this.ename = ename;
+        this.desg = desg;
+        this.cname = cname;
+        this.phno = phno;
+        this.email = email;
+    }
+
     public static void main(String[] args) {
-        int choice,salary,i,n;
+        int i,n,choice,salary;
         String ecode,ename,desg,cname,phno,email;
         Scanner sc=new Scanner(System.in);
-        ArrayList arr= new ArrayList<>();
+        ArrayList<employee> arr= new ArrayList<employee>();
         System.out.println("Enter 1-Add employee details\n 2-View employee details\n3-Search employee details\n4-Delete employee details\n5-Exit\nEnter your choice: ");
         choice= sc.nextInt();
         switch (choice) {
@@ -23,6 +37,11 @@ public class employee {
                     phno=sc.next();
                     email=sc.next();
                 }
+                employee obj= new employee();
+                arr.add(obj);
+                break;
+
+
         }
     }
 }
