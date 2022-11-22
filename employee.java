@@ -2,10 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class employee {
-    Integer salary;
-    String ecode,ename,desg,cname,phno,email;
+    double salary;
+    String ecode,ename,desg,cname,email;
+    long phno;
 
-    public employee(Integer salary, String ecode, String ename, String desg, String cname, String phno, String email) {
+    public employee(double salary, String ecode, String ename, String desg, String cname, long phno, String email) {
         this.salary = salary;
         this.ecode = ecode;
         this.ename = ename;
@@ -16,8 +17,10 @@ public class employee {
     }
 
     public static void main(String[] args) {
-        int i,n,choice,salary;
-        String ecode,ename,desg,cname,phno,email;
+        int i,n,choice;
+        double salary;
+        long phno;
+        String ecode,ename,desg,cname,email;
         Scanner sc=new Scanner(System.in);
         ArrayList<employee> arr= new ArrayList<employee>();
         System.out.println("Enter 1-Add employee details\n 2-View employee details\n3-Search employee details\n4-Delete employee details\n5-Exit\nEnter your choice: ");
@@ -31,16 +34,27 @@ public class employee {
                     ecode=sc.next();
                     ename=sc.next();
                     desg=sc.next();
-                    salary=sc.nextInt();
+                    salary=sc.nextDouble();
                     cname=sc.next();
-                    phno=sc.next();
+                    phno=sc.nextLong();
                     email=sc.next();
                 }
-                employee obj= new employee(Integer salary, String ecode, String ename, String desg, String cname, String phno, String email);
+                employee obj= new employee(salary,ecode,ename,desg,cname,phno,email);
                 arr.add(obj);
                 break;
-
-
+            case 2:
+                System.out.println("Displasy employee details:");
+                for (employee emp : arr)
+                {
+                    System.out.println(emp.ecode);
+                    System.out.println(emp.ename);
+                    System.out.println(emp.desg);
+                    System.out.println(emp.salary);
+                    System.out.println(emp.cname);
+                    System.out.println(emp.phno);
+                    System.out.println(emp.email);
+                }
+                break;
         }
     }
 }
