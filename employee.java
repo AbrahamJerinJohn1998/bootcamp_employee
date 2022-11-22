@@ -86,6 +86,7 @@ public class employee {
                     break;
                     }
                 }
+            case 5:System.exit(0);
 
         }
     }
