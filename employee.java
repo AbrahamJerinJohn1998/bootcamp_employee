@@ -44,7 +44,8 @@ public class employee {
                 break;
             case 2:
                 System.out.println("Displasy employee details:");
-                for (employee emp : arr)
+                for (employee emp:arr
+                     )
                 {
                     System.out.println(emp.ecode);
                     System.out.println(emp.ename);
@@ -58,7 +59,7 @@ public class employee {
             case 3:
                 System.out.println("Enter employee code: ");
                 String empcode=sc.next();
-                for (employee e1 : arr)
+                for (employee e1:arr)
                 {
                     if (empcode==e1.ecode)
                     {
@@ -74,11 +75,11 @@ public class employee {
                     }
                     else System.out.println("Employee details not found");
                 }
-                break;;
+                break;
             case 4:
                 System.out.println("Enter employee code: ");
                 empcode =sc.next();
-                for (employee e1 : arr)
+                for (employee e1:arr)
                 {
                     if (empcode== e1.ecode)
                     {
