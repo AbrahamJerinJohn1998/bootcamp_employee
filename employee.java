@@ -55,6 +55,27 @@ public class employee {
                     System.out.println(emp.email);
                 }
                 break;
+            case 3:
+                System.out.println("Enter employee code: ");
+                String empcode=sc.next();
+                for (employee e1 : arr)
+                {
+                    if (empcode==e1.ecode)
+                    {
+                        System.out.println("Details of employee are:");
+                        System.out.println(e1.ecode);
+                        System.out.println(e1.ename);
+                        System.out.println(e1.desg);
+                        System.out.println(e1.salary);
+                        System.out.println(e1.cname);
+                        System.out.println(e1.phno);
+                        System.out.println(e1.email);
+                        break;;
+                    }
+                    else System.out.println("Employee details not found");
+                }
+                break;;
+
         }
     }
 }
