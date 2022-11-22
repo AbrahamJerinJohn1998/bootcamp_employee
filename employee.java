@@ -75,6 +75,17 @@ public class employee {
                     else System.out.println("Employee details not found");
                 }
                 break;;
+            case 4:
+                System.out.println("Enter employee code: ");
+                empcode =sc.next();
+                for (employee e1 : arr)
+                {
+                    if (empcode== e1.ecode)
+                    {
+                    arr.remove(e1);
+                    break;
+                    }
+                }
 
         }
     }
